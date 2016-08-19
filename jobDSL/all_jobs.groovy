@@ -25,6 +25,7 @@ job(buildJobName) {
     		}
         }
     steps {
+        shell("docker run --rm -v "$(PWD)":/usr/src/myapp -w /usr/src/myapp golang:1.6 go test -v")
         shell('''\
             echo "version=\$(cat version.txt)" > props.env
             sudo docker build --no-cache -t ${GITHUB_USERNAME}/http-app:snapshot .
