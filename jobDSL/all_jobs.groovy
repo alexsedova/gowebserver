@@ -35,11 +35,10 @@ job(buildJobName) {
             sudo docker kill ${cid}
             sudo docker rm ${cid}'''.stripIndent())
     }
-  {
+  
   wrappers {
   	pretestedIntegration("master","origin")
-  }
-}
+  	}
     publishers {
     	pretestedIntegration()
         downstreamParameterized {
