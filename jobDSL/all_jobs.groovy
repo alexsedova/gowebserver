@@ -18,7 +18,7 @@ job(buildJobName) {
     		remote {
                 name('origin')
                 url('https://github.com/alexsedova/gowebserver.git')
-                credentialsId('alexsedova')
+                credentials('8f9d59ba-3c46-4667-bd90-0d3fb2d7b555')
             }
 
     		branch('*/ready/**')
