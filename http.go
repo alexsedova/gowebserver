@@ -18,6 +18,11 @@ func to_roman(n int)  string {
     if n == 3 {return "III"}
     if n == 4 {return "IV" }
     if n == 5 { return "V" }
+    if n == 6 { return "VI"}
+    if n == 7 { return "VII" }
+    if n == 8 { return "VIII" }
+    if n == 9 { return "IX" }
+    if n == 10 { return "X" }
     return "This number is not yet supported.. Sorry!"
 }
 
