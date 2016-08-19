@@ -12,11 +12,15 @@ pipelineName = "${projectName}-pipeline_GEN"
 
 job(buildJobName) {
     logRotator(-1, 5, -1, -1)
-    Utils.configureGit(it, "${repositoryUrl}")
     Utils.configureEnv(it, "${GITHUB_USERNAME}")
     scm {
     	git {
-    		branch('ready/')
+    		remote {
+                name('origin')
+                url('https://github.com/alexsedova/gowebserver.git')
+            }
+
+    		branch('*/ready/**')
     		}
         }
     steps {
